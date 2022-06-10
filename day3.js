@@ -19,4 +19,31 @@ function show() {
     result.innerText = elements[0].value;
     console.log(elements[0].value);
   }
+
+
+
+function append(){
+    var li = document.createElement('li');
+    var text = document.createTextNode("追加してます");
+    li.appendChild(text);
+    var listsElement = document.getElementById( "list" ) ;
+    listsElement.appendChild(li);
+
+}
+
+function remove(){
+    var parentElement = document.getElementsByClassName("container_standard")[0];
+    var elements = parentElement.getElementsByClassName("item");
+
+    var removeIndex = getRandomInt(elements.length);
+    if (elements.length != 0){
+        parentElement.removeChild(elements[removeIndex]);
+    }
+    
+}
+
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+  }
+
   
