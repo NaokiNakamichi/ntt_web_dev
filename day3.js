@@ -14,7 +14,9 @@ console.log(average);
 function show() {
     var result = document.getElementById('result');
     console.log(result.innerText);
-    var nowDate = new Date();
-    result.innerText = nowDate.toLocaleString();
+
+    var elements = document.getElementsByName('input_form_by_name');
+    result.innerText = elements[0].value;
+    console.log(elements[0].value);
   }
   
